@@ -1,0 +1,60 @@
+set nocompatible 
+filetype off 
+
+set rtp +=~/.vim/bundle/Vundle.vim
+
+call vundle#begin()
+
+Plugin 'gmarik/Vundle.vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/syntastic.git'
+Plugin 'tpope/vim-fugitive'
+""Plugin 'godlygeek/tabular'
+
+if has('gui_running') 
+    Plugin 'Valloric/YouCompleteMe'
+    let g:ycm_path_to_python_interpreter = '/usr/bin/python'
+    let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
+    let g:ycm_autoclose_preview_window_after_insertion = 1
+endif
+
+Plugin 'majutsushi/tagbar'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'vim-pandoc/vim-pandoc-syntax'
+Plugin 'vim-pandoc/vim-pandoc'
+Plugin 'dhruvasagar/vim-table-mode'
+
+call vundle#end()
+filetype plugin indent on
+
+"if has('gui_running')
+    set background=dark
+"endif
+
+colorscheme solarized
+
+syntax on
+set autoindent 
+set number 
+
+""Tab stuff
+
+" size of a hard tabstop
+set tabstop=2
+
+" size of an "indent"
+set shiftwidth=2
+
+" a combination of spaces and tabs are used to simulate tab stops at a width
+" other than the (hard)tabstop
+set softtabstop=2
+
+" make "tab" insert indents instead of tabs at the beginning of a line
+set smarttab
+
+" always uses spaces instead of tab characters
+set expandtab
+set spell
+
+" To enable grid 
+let g:table_mode_corner_corner='+'

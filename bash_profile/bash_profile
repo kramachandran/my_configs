@@ -1,0 +1,11 @@
+# added by Anaconda 2.0.1 installer
+export PATH="/Users/kramachandran/anaconda/bin:$PATH"
+
+# Tell ls to be colourful
+export CLICOLOR=1
+
+ # Tell grep to highlight matches
+export GREP_OPTIONS='--color=auto'
+
+eval `gdircolors ~/.dircolors`
+alias ls='gls --color=auto'
